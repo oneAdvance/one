@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>注册</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="logIn.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="iconfont.css">
+
+</head>
+<body>
+  
+    <div class="content">
+    	<form action="" method="get" accept-charset="utf-8">
+    		<div class="information">
+  				<div class="Review">
+  					<div class="modal_title">
+  						<div class="shut_down">
+  							<span>×</span>
+  						</div>
+  						<div class="text">
+  							<span>新用户注册</span>
+  						</div>
+  					</div>
+  					<div class="title"><span>欢迎登录中德安联人寿/汇医医学专家意见服务客户端</span></div>
+  					<div class="main">
+  						<div class="main_left">
+  							<div class="main_text">
+  								<span>首次登录请提交您的信息,确认成功后即可登录</span>
+  							</div>
+  							<div class="main_item">
+  								<input id="username" type="text" name="username" value="" placeholder="请输入账号">
+  								<i class="icon iconfont icon-yonghu"></i>
+  							</div> 
+  							<div class="main_item">
+  								<input id="tel" type="text" name="tel"   placeholder="请输入手机号">
+  								<i class="icon iconfont icon-shouji"></i>
+  							</div>
+  							<div class="main_item">
+  								<input id="email" type="email" name="email"   placeholder="请输入邮箱">
+  								<i class="icon iconfont icon-tubiao209"></i>
+  							</div>
+  							<div class="main_item">
+  								<input id="Orders" type="text" name="Orders"  placeholder="请输入保单号">
+  								<i class="icon iconfont icon-biaodan"></i>
+  							</div>
+  							<div class="main_item confirm">
+  								<button class="determine" type="button">确认</button>
+  							</div>
+  							<div class="main_item text_left" style="color:#fff">
+  								<span>已有账号？<a href="login.html">登录</a> </span>
+  							</div>
+  						</div>
+  						<div class="main_right">
+  							<div class="main_item_top"></div>
+  							<div class="main_right_item">
+  								<div class="main_cent"></div>
+  							</div>
+  						</div>
+  						<div class="clearfloat"></div>
+  					</div>
+  					<div class="modal_bottom">
+  						<div class="modal_btn">
+  							<button type="button">确定</button>
+  						</div>
+  						<div class="modal_prompt" style="color:#fff">
+  							 <span>已有账号？<a href="login.html">登录</a> </span> 
+  						</div>
+  						<div class="modal_bottom_text">
+  							<span>欢迎登录中德安联人寿汇医医学专家意见服务客户端</span>
+  						</div>
+  					</div>
+  				</div>
+  				<div class="Application">
+  					<div class="title"><span>账号申请</span></div>
+  					<div class="modal_title">
+  						<div class="shut_down">
+  							<span>×</span>
+  						</div>
+  						<div class="text">
+  							<span>账号申请</span>
+  						</div>
+  					</div>
+  					<div class="main">
+  						<div class="main_left">
+  							<div class="main_text"><span>请设置您的账号信息</span></div>
+  							<div class="main_item">
+  								<input id="usernameTwo" type="text" name="usernameTwo" value="" placeholder="请输入用户名">
+  								<i class="icon iconfont icon-yonghu"></i>
+  							</div>	
+                <div class="main_item">
+                  <input id="sexM" type="text" name="sexM" value="" >
+                  <i class="icon iconfont icon-tijianxingbiefenxi"></i>
+                  <select id="sex" >
+                    <option class="sex"  value="0">请选择性别</option>
+                    <option class="sex" value="1">男</option>
+                    <option class="sex" value="2">女</option>
+                    
+                  </select>
+                </div>
+  							<div class="main_item">
+  								<label>密码：</label>
+  								<span class="prompt">1313</span>
+  							</div>	
+  							<div class="main_item hidden">
+  								<span >密码请妥善保管，如忘记密码。请联系我们：40000000</span>
+  							</div>
+  							<div class="main_item confirm">
+  								<button class="determine" type="button">下一步</button>
+  							</div>
+  									
+  						</div>
+  						<div class="main_right">
+  							<div class="main_item_top"></div>
+  							<div class="main_right_item">
+  								<div class="main_cent"></div>
+  							</div>
+  						</div>
+  						<div class="clearfloat"></div>
+  					</div>
+  					<div class="modal_bottom">
+  						<div class="prompt"><span >密码请妥善保管，如忘记密码。请联系我们：40000000</span></div>
+  						<div class="modal_btn">
+  							<button type="sublim">下一步</button>
+  						</div>
+  						
+  						<div class="modal_bottom_text">
+  							<span>欢迎登录中德安联人寿汇医医学专家意见服务客户端</span>
+  						</div>
+  					</div>
+  				</div>
+			
+			</div>
+    	</form>
+		
+    </div>
+
+
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!-- 	<script type="text/javascript" src="mobile/layer.js"></script> -->
+    <script type="text/javascript">
+    	var Forms = {};    	
+    	
+    	$(".Review .determine").click(function(){
+    		var valid = true;
+    		var Forms = {
+    			username : $("#username").val(),
+    			tel : $("#tel").val(),
+    			email : $("#email").val(),
+    			Orders : $("#Orders").val()
+    		};
+    		console.log(Forms);
+    		if(valid && Forms.username.length <= 3){
+                valid = false;
+                $("#username").css('borderColor','red');
+                 // var tips = $("#username").attr("data-foolish-msg");
+                $("#username").focus();
+
+
+            }else{
+            	$("#username").css('border','1px solid #6aaaf2');
+            }
+			if(valid && Forms.tel.length <= 3){
+                valid = false;
+                $("#tel").css('borderColor','red');
+                 // var tips = $("#tel").attr("data-foolish-msg");
+                $("#tel").focus();
+
+
+            }else{
+            	$("#tel").css('border','1px solid #6aaaf2');
+            }
+			if(valid && Forms.email.length <= 3){
+                valid = false;
+                $("#email").css('borderColor','red');
+                 // var tips = $("#email").attr("data-foolish-msg");
+                $("#email").focus();
+
+
+            }else{
+            	$("#email").css('border','1px solid #6aaaf2');
+            }
+            if(valid && Forms.Orders.length <= 3){
+                valid = false;
+                $("#Orders").css('borderColor','red');
+                 // var tips = $("#Orders").attr("data-foolish-msg");
+                $("#Orders").focus();
+
+
+            }else{
+            	$("#Orders").css('border','1px solid #6aaaf2');
+            }
+            if(valid){
+                $(".Review").css('display','none');
+                $(".Application").css('display','block');
+                return true;
+            }else{
+                return false;
+            }
+
+    	})
+    	$(".modal_btn button").click(function(){
+    		var valid = true;
+    		var Forms = {
+    			username : $("#username").val(),
+    			tel : $("#tel").val(),
+    			email : $("#email").val(),
+    			Orders : $("#Orders").val()
+    		};
+    		console.log(Forms);
+    		if(valid && Forms.username.length <= 3){
+                valid = false;
+                $("#username").css('border','1px solid red');
+                $("#username").focus();
+            }else{
+            	$("#username").css('border','1px solid transparent');
+            }
+			if(valid && Forms.tel.length <= 3){
+                valid = false;
+                $("#tel").css('border','1px solid red');
+                $("#tel").focus();
+
+
+            }else{
+            	$("#tel").css('border','1px solid transparent');
+            }
+			if(valid && Forms.email.length <= 3){
+                valid = false;
+                $("#email").css('border','1px solid red');
+                $("#email").focus();
+
+
+            }else{
+            	$("#email").css('border','1px solid transparent');
+            }
+            if(valid && Forms.Orders.length <= 3){
+                valid = false;
+                $("#Orders").css('border','1px solid red');
+                 
+                $("#Orders").focus();
+
+
+            }else{
+            	$("#Orders").css('border','1px solid transparent');
+            }
+            if(valid){
+                $(".Review").css('display','none');
+                $(".Application").css('display','block');
+                return true;
+            }else{
+                
+                return false;
+            }
+
+    	});
+
+    	
+       var FormsTwo = {};
+    	$(".Application .main_item button").click(function(){
+        var valid = true;
+        var FormsTwo = {
+          usernameTwo : $("#usernameTwo").val(),
+          sex : $("#sex").val()
+        }
+        
+        if(valid && FormsTwo.usernameTwo.length <= 3){
+          valid = false;
+          $("#usernameTwo").css('border','1px solid red');
+          $("#usernameTwo").focus();
+        }else{
+          $("#usernameTwo").css('borderColor','#6aaaf2');
+         
+        } 
+        if(valid && FormsTwo.sex <= 0 ){
+          valid = false;
+          $("#sexM").css('border','1px solid red');
+          $("#sex").focus();
+        }else{
+          $("#sexM").css('borderColor','#6aaaf2');
+        }	
+
+        if(valid){
+            window.location.href='login.html';
+            return true;
+        }else{
+          return false;
+        }
+
+    	});	
+
+      $(".Application .modal_btn button").click(function(){
+          var valid = true;
+          var FormsTwo = {
+            usernameTwo : $("#usernameTwo").val(),
+            sex : $("#sex").val()
+          }
+          if(valid && FormsTwo.usernameTwo.length <= 3){
+            valid = false;
+            $("#usernameTwo").css('border','1px solid red');
+            $("#usernameTwo").focus();
+          }else{
+            $("#usernameTwo").css('borderColor','#6aaaf2');
+          } 
+          if(valid && FormsTwo.sex <=0 ){
+            valid = false;
+            $("#sexM").css('border','1px solid red');
+            $("#sexM").focus();
+          }else{
+            $("#sexM").css('borderColor','transparent');
+          } 
+
+        if(valid){
+            window.location.href='login.html';
+            return true;
+        }else{
+          return false;
+        }
+
+
+      }); 
+    		
+
+
+       
+  
+    </script>
+</body>
+</html>
